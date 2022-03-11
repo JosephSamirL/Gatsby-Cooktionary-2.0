@@ -2,9 +2,11 @@ import React from 'react'
 import Layout from '../components/Layout'
 import {  graphql } from 'gatsby'
 import ReccipiesList from "../components/RecipiesList"
+import SEO from '../components/SEO'
 const Contact = ({data:{allContentfulRecipe:{nodes:recipes}}}) => {
   return (
     <Layout>
+      <SEO title={"Contact"}/>
       <main className='page'>
 
         <section className='contact-page'>
