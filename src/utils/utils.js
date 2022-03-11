@@ -1,24 +1,22 @@
-const setupTags = recipes=>{
-    const newTags = {};
-    recipes.forEach(recipe => {
-        recipe?.content.tags.forEach(tag=>{
-            if(newTags[tag]){
-                newTags[tag] +=1
-            }else{
-                newTags[tag] = 1;
-            }
-        })
-    });
-const out = Object.entries(newTags)
-out.filter((a,b)=>{
-    const [firstTag] = a;
-    const [secondTag] = b;
+const setupTags = recipes => {
+  const allTags = {}
 
-    return firstTag.localeCompare(secondTag);
-})
+  recipes.forEach(recipe => {
+    recipe.content.tags.forEach(tag => {
+      if (allTags[tag]) {
+        allTags[tag] = allTags[tag] + 1
+      } else {
+        allTags[tag] = 1
+      }
+    })
+  })
+  const newTags = Object.entries(allTags).sort((a, b) => {
+    const [firstTag] = a
+    const [secondTag] = b
+    return firstTag.localeCompare(secondTag)
+  })
 
-
-
-    return out
+  return newTags
 }
+
 export default setupTags
