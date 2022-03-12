@@ -23,6 +23,7 @@
     "gatsby-source-contentful": "^7.6.1",
     "gatsby-source-filesystem": "^4.8.1",
     "gatsby-transformer-sharp": "^4.8.0",
+    "lmdb-store": "^1.6.14",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",

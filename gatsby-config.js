@@ -54,4 +54,7 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`
 ],
+  flags: {
+    PARALLEL_QUERY_RUNNING: true
+  }
 }
