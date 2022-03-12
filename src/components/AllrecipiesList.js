@@ -22,7 +22,7 @@ const query = graphql`
 `
 const AllrecipiesList = () => {
 const {allContentfulRecipe:{nodes:recipes}} = useStaticQuery(query);
-console.log(recipes)
+
   return (
     <section className='recipes-container'>
     
