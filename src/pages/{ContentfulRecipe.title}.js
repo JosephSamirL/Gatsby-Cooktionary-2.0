@@ -94,30 +94,30 @@ const {tags,ingredients,instructions,nutrition} = content
               </div>
               <div>
              
-                <div class="nutrition_facts international">
-    <div class="heading black">Nutrition Facts</div>
-    <div class="divider thick"></div>
+                <div className="nutrition_facts international">
+    <div className="heading black">Nutrition Facts</div>
+    <div className="divider thick"></div>
    
     
-    <div class="nutrient black left">Energy</div>
-    <div class="nutrient black right tRight">{nutrition.find(item=>item.split(":")[0]==='Calories').split(":")[1]}kcal</div>
+    <div className="nutrient black left">Energy</div>
+    <div className="nutrient black right tRight">{nutrition.find(item=>item.split(":")[0]==='Calories').split(":")[1]}kcal</div>
     
-    <div class="divider thin"></div>
+    <div className="divider thin"></div>
     
                     {nutrition.filter(item=>item.split(":")[0]!=='Calories').map((item, index) => {
                   return (
         <div key={index}>
-        <div  class="divider thin"></div>
-        <div class="nutrient left">{item.split(":")[0]}</div>
-        <div class="nutrient right tRight">{item.split(":")[1]}</div>
+        <div  className="divider thin"></div>
+        <div className="nutrient left">{item.split(":")[0]}</div>
+        <div className="nutrient right tRight">{item.split(":")[1]}</div>
         </div>
                   )
                 })}
-        <div class="divider thin"></div>
-        <div class="nutrient left">Sodium</div>
-        <div class="nutrient right tRight">6mg</div>
+        <div className="divider thin"></div>
+        <div className="nutrient left">Sodium</div>
+        <div className="nutrient right tRight">6mg</div>
     
-    <div class="divider medium"></div>
+    <div className="divider medium"></div>
 </div>
                
               </div>
